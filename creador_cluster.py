@@ -2,23 +2,25 @@ from dataclasses import dataclass
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
 
-class cluster:
+class cluster():
 
     #constructor de la clase
     def __init__(self,datos, num_cluster):
         self.datos = datos
         self.num_cluster=num_cluster
 
-    def set_datos(self):
-        self.datos=datos
-
-    def get_datos(self):
-        pri
 
     #leemos los datos
     def leer_datos(self):
         self.datos=pd.reaad_csv('datas/frutas.csv',names=['DIAMETRO','PESO'], header=None )
+
+    def generar_guardar_plot(self):
+        #Visualización gráfica de los datos
+        self.datos.plot.scatter(x='DIAMETRO',y='PESO')
+        #gaurdamos el plot en un archivo
+        plt.savefig('scatter_frutas.png')
 
 
 
@@ -28,7 +30,6 @@ class cluster:
 
 
     #Caraga de datos
-frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
 
 #Visualización gráfica de los datos
 frutas.plot.scatter(x="DIAMETRO",y="PESO")

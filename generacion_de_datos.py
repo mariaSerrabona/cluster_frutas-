@@ -33,7 +33,18 @@ from albaricoques_datos import datos_albaricoques
 
 #---- CARACTERÍSTICAS------
 
-class datos:
+class Datos(datos_cerezas, datos_albaricoques):
+
+#PREGUNTAAAA!!!
+
+#DE DONDE TENGO QUE HEREDAR PARA PODER ACCEDER A LA FUNCIÓN GENERAR_CEREZAS/ALBARICOQUES
+
+
+    def __init__(self):
+        super().__init__(self)
+
+    # def __str__(self):
+    #     return f"({self.albaricoque}) {self.cereza}"
 
     #CEREZAS
     #caracteristicasCerezas = [[17,19,1,5],[20,21,5,6],[22,23,6,7],[24,25,7,8.5],[26,27,8.5,10],[28,29,10,11.5]]
@@ -92,11 +103,11 @@ class datos:
 
     #     return albaricoques
 
-    def generar_frutas():
-        cerezas=datos_cerezas.generar_cerezas()
-        albaricoques=datos_albaricoques.generar_albaricoques()
+    def generar_frutas(self):
+        self.cereza=super().generar_cerezas()
+        self.albaricoque=super().generar_albaricoques()
         #Constitución de las observaciones
-        frutas = cerezas+albaricoques
+        frutas = self.cereza+self.albaricoque
         #Mezcla de las observaciones
         random.shuffle(frutas)
 

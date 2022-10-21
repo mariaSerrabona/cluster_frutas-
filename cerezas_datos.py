@@ -1,20 +1,19 @@
 import numpy as np
 
-class Cereza:
-
-    def __init__(self, diametro, peso):
-        self.cerezas_lista=[]
+class Cereza():
+    def __init__(self, diametro, peso, cerezas_lista):
+        self.cerezas_lista=cerezas_lista
         self.diametro = diametro
         self.peso = peso
 
     def __str__(self):
         return f"({self.diametro}) {self.peso}"
+
 class datos_cerezas(Cereza):
 
     def __init__(self, diametro, peso, cantidadObservaciones, cerezas_lista):
-        super().__init__(diametro, peso)
+        super().__init__(diametro, peso, cerezas_lista)
         self.cantidadObservaciones=cantidadObservaciones
-        self.cerezas_lista=cerezas_lista
 
     def set_cerezas(self, cerezas_lista):
         self.cerezas_lista=cerezas_lista
@@ -26,7 +25,7 @@ class datos_cerezas(Cereza):
         #GENERACION DE LOS DATOS
         # [DIAMETRO, PESO]
         #cantidadObservaciones = 200
-
+        self.cerezas_lista=[]
         #Generación de las cerezas
         caracteristicasCerezas = [[17,19,1,5],[20,21,5,6],[22,23,6,7],[24,25,7,8.5],[26,27,8.5,10],[28,29,10,11.5]]
         np.random.seed()
