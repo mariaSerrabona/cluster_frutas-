@@ -1,0 +1,11 @@
+
+pipenv==2018.11.26
+pylint==2.3.1
+
+pylint-plugin-utils==0.6
+
+PANDAS==0.24.2
+NUMPY==1.16.3
+SCIKIT-LEARN==0.21.0
+MATPLOTLIB==3.0.3
+JOBLIB==0.13.2
