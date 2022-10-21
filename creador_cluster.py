@@ -19,7 +19,7 @@ class cluster():
         #Visualización gráfica de los datos
         self.datos_frutas.plot.scatter(x='DIAMETRO',y='PESO')
         #gaurdamos el plot en un archivo
-        plt.savefig('scatter_frutas.png')
+        plt.savefig('fotos/scatter_frutas.png')
 
     def generar_cluster(self):
         #Aprendizaje con el algoritmo K-Mean
@@ -36,7 +36,7 @@ class cluster():
         #Visualización de los centroides
         centers = modelo.cluster_centers_
         plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5)
-        plt.savefig('KMeans_frutas.png')
+        plt.savefig('fotos/KMeans_frutas.png')
 
 
     def predicciones_kmeans(self):
