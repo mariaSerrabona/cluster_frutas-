@@ -30,20 +30,20 @@ class curvas_gausianas():
 
     #constructor de la clase
     #que daría por poner un super de la clase que hereda
-    def __init__(self,datos_frutas):
-        self.datos_frutas = datos_frutas
-
-    def lector_datos(self):
+    def __init__(self):
         self.datos_frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
 
+    def lector_datos(self, ):
+        datos_frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
 
-    def generar_curvas_gausianas(self, n_componentes):
+
+    def generar_curvas_gausianas(self):
         n_components = 2
-
+        self.datos_frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
 
         # Extraer x e y
         x = self.datos_frutas.DIAMETRO
-        y = self.datos_fruta.PESO
+        y = self.datos_frutas.PESO
         # Define los límites
         deltaX = (max(x) - min(x))/10
         deltaY = (max(y) - min(y))/10
@@ -83,3 +83,12 @@ class curvas_gausianas():
         ax.view_init(60, 35)
         plt.show()
         plt.savefig('fotos/curva_gausiana2.png')
+
+
+def main():
+    curva=curvas_gausianas()
+    curva.generar_curvas_gausianas()
+
+
+if __name__ == '__main__':
+    main()
