@@ -23,11 +23,13 @@ import pandas as pnd
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as st
+from generacion_de_datos import Datos
 
 
 class curvas_gausianas():
 
     #constructor de la clase
+    #que daría por poner un super de la clase que hereda
     def __init__(self,datos_frutas):
         self.datos_frutas = datos_frutas
 
