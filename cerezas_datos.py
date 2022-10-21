@@ -5,10 +5,10 @@ class datos_cerezas:
     def __init__(self,cantidadObservaciones):
         self.cantidadObservaciones = cantidadObservaciones
 
-    def set_albaricoques(self, cereza):
+    def set_cerezas(self, cereza):
         self.cereza=cereza
 
-    def get_albaricoques(self):
+    def get_cerezas(self):
         print('Medidas de cerezas: '+self.cereza)
 
     def generar_cerezas(self):
