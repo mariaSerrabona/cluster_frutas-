@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
+from sklearn import mixture
 
 
 class cluster():
@@ -66,6 +67,24 @@ class cluster():
         else:
             print("¡Es una cereza!")
 
+    def mezclas_gaussianas(self):
+        #---- Modelo de mezclas Gaussianas (GMM) -----------
+
+        #Determinación de los clústeres (encontrar 2)
+        gmm = mixture.GaussianMixture(n_components=2)
+
+        #Aprendizaje
+        gmm.fit(self.datos_frutas)
+
+        #Clasificación
+        clusteres = gmm.predict(self.datos_frutas)
+
+        #Visualización de los clústeres
+        plt.scatter(self.datos_frutas.DIAMETRO, self.datos_frutas.PESO, c=clusteres, s=40, cmap='viridis');
+        plt.xlabel("DIAMETRO")
+        plt.ylabel("PESO")
+        plt.savefig('fotos/Modelo_mezclas_gaussianas.png')
+
 
 
 
@@ -75,6 +94,7 @@ def main():
     cluster_prueba=cluster(datos_frutas, 2)
     cluster_prueba.generar_cluster()
     cluster_prueba.predicciones_kmeans()
+    cluster_prueba.mezclas_gaussianas()
 
 
 if __name__ == '__main__':
