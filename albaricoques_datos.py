@@ -27,6 +27,7 @@ class datos_albaricoques(Albaricoque):
 
     def generar_albaricoques(self):
         caracteristicasAlbaricoques = [[40,44,41],[45,49,54],[50,54,74],[55,59,100]]
+        self.cantidadObservaciones=4
         #Generación de los albaricoques
         self.albaricoques_lista = []
         random.seed()
@@ -49,8 +50,8 @@ class datos_albaricoques(Albaricoque):
 
 def main():
     lista_albaricoque=[[22.4,6.42],[58.09,106.06],[20.46,5.98],[28.63,10.85],[17.59,3.58]]
-    albaricoque_prueba=Albaricoque(40,44, lista_albaricoque)
-    info_albaricoques=datos_albaricoques(albaricoque_prueba)
+    info_albaricoques=datos_albaricoques(40,44, lista_albaricoque, 4)
+    info_albaricoques.generar_albaricoques()
 
 
 

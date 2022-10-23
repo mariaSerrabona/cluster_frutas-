@@ -33,8 +33,8 @@ class curvas_gausianas():
     def __init__(self):
         self.datos_frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
 
-    def lector_datos(self, ):
-        datos_frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
+    # def lector_datos(self, ):
+    #     datos_frutas = pnd.read_csv("datas/frutas.csv", names=['DIAMETRO','PESO'], header=None)
 
 
     def generar_curvas_gausianas(self):

@@ -20,6 +20,7 @@ class cluster():
         #Visualización gráfica de los datos
         self.datos_frutas.plot.scatter(x='DIAMETRO',y='PESO')
         #gaurdamos el plot en un archivo
+        plt.show()
         plt.savefig('fotos/scatter_frutas.png')
 
     def generar_cluster(self):
@@ -37,6 +38,7 @@ class cluster():
         #Visualización de los centroides
         centers = modelo.cluster_centers_
         plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5)
+        plt.show()
         plt.savefig('fotos/KMeans_frutas.png')
 
 
@@ -83,6 +85,7 @@ class cluster():
         plt.scatter(self.datos_frutas.DIAMETRO, self.datos_frutas.PESO, c=clusteres, s=40, cmap='viridis');
         plt.xlabel("DIAMETRO")
         plt.ylabel("PESO")
+        plt.show()
         plt.savefig('fotos/Modelo_mezclas_gaussianas.png')
 
 
