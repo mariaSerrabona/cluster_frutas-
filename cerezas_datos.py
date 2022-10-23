@@ -49,5 +49,3 @@ def main():
     info_cerezas.generar_cerezas()
 
 
-if __name__ == "__main__":
-    main()

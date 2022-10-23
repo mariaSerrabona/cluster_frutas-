@@ -100,5 +100,4 @@ def main():
     cluster_prueba.mezclas_gaussianas()
 
 
-if __name__ == '__main__':
-    main()
+
