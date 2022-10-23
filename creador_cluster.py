@@ -12,8 +12,8 @@ class cluster():
 
 
     #leemos los datos
-    def leer_datos(self):
-        self.datos_frutas=pd.read_csv('datas/frutas.csv',names=['DIAMETRO','PESO'], header=None )
+    # def leer_datos(self):
+    #     self.datos_frutas=pd.read_csv('datas/frutas.csv',names=['DIAMETRO','PESO'], header=None )
 
     def generar_guardar_plot(self):
         #Visualización gráfica de los datos
@@ -40,7 +40,8 @@ class cluster():
 
 
     def predicciones_kmeans(self):
-
+        modelo=KMeans(self.num_cluster)
+        modelo.fit(self.datos_frutas)
         cereza = [[26.98,8.75]]
         self.numCluster = modelo.predict(cereza)
         print("Número de clúster de las cerezas: "+ str(self.numCluster))
@@ -64,3 +65,17 @@ class cluster():
             print("¡Es un albaricoque!")
         else:
             print("¡Es una cereza!")
+
+
+
+
+
+def main():
+    datos_frutas=pd.read_csv('datas/frutas.csv',names=['DIAMETRO','PESO'], header=None )
+    cluster_prueba=cluster(datos_frutas, 2)
+    cluster_prueba.generar_cluster()
+    cluster_prueba.predicciones_kmeans()
+
+
+if __name__ == '__main__':
+    main()

@@ -43,3 +43,16 @@ class datos_albaricoques(Albaricoque):
             self.albaricoques_lista.append([diametro,peso])
 
         return self.albaricoques_lista
+
+
+
+
+def main():
+    lista_albaricoque=[[22.4,6.42],[58.09,106.06],[20.46,5.98],[28.63,10.85],[17.59,3.58]]
+    albaricoque_prueba=Albaricoque(40,44, lista_albaricoque)
+    info_albaricoques=datos_albaricoques(albaricoque_prueba)
+
+
+
+if __name__ == '__main__':
+    main()

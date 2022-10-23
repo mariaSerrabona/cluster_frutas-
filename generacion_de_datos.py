@@ -116,3 +116,14 @@ class Datos(datos_cerezas, datos_albaricoques):
         frutas_df.to_csv("datas/frutas.csv", index=False,header=False)
 
         return frutas_df
+
+
+
+
+def main():
+    curva=curvas_gausianas()
+    curva.generar_curvas_gausianas()
+
+
+if __name__ == '__main__':
+    main()
