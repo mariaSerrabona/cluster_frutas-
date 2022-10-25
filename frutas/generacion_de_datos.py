@@ -69,5 +69,3 @@ def main():
     conjunto_frutas=Datos(conjunto_cerezas, conjunto_albaricoques)
     conjunto_frutas.generar_frutas()
 
-if __name__ == "__main__":
-    main()
